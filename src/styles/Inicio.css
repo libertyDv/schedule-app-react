@@ -1,0 +1,40 @@
+.divsInicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.divTodos,
+.divTrabajo,
+.divPersonal {
+    background: linear-gradient(to top, #eee9f7, #D3C0FD);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+
+}
+
+.contenedorTarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #eee9f7, #F1CCEA);
+    width: 35%;
+    justify-content: space-around;
+    margin: auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.botonDone, .botonDelete {
+    background-color: #d3c0fd00;
+    border: none;
+    cursor: pointer;
+
+}
+
+.botonDone svg, .botonDelete svg {
+    fill: #ac93e2;
+}

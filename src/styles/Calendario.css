@@ -1,0 +1,30 @@
+.calendario {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.react-calendar {
+    width: 80%;
+    background-color: #D6F6DD;
+    border-radius: 8px;
+}
+
+.react-calendar__tile--hover {
+    background-color: #201010;
+    /* Cambia el color de fondo en hover según tus preferencias */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre los meses */
+}
+
+.react-calendar__navigation__prev--hover,
+.react-calendar__navigation__next--hover {
+    background-color: #dcdcdc;
+    /* Cambia el color de fondo en hover según tus preferencias */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre los botones */
+}
+
+.react-calendar__month-view .react-calendar__tile:hover {
+    background-color: #99cda4;
+}
