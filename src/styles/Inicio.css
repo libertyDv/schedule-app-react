@@ -28,13 +28,65 @@
     border-radius: 15px;
 }
 
-.botonDone, .botonDelete {
+.botonDone,
+.botonDelete {
     background-color: #d3c0fd00;
     border: none;
     cursor: pointer;
 
 }
 
-.botonDone svg, .botonDelete svg {
+.botonDone svg,
+.botonDelete svg,
+.botonAdd svg {
     fill: #ac93e2;
 }
+
+.botonAdd {
+    background-color: #D6F6DD;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F5E8F0;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popup input,
+.popup select {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #dfd2fc;
+  border: none;
+  border-radius: 10px;
+}
+
+.popup button {
+    padding: 8px 20px;
+    background-color: #D6F6DD;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: #9ed3aa;
+  }
