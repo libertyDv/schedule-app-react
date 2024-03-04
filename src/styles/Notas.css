@@ -1,0 +1,54 @@
+.aniadirNota.notasCoponent {
+    width: 60px;
+    padding: 100px;
+}
+
+.botonAdd2 svg {
+    fill: #ac93e2;
+}
+
+.botonAdd2 {
+    background-color: #D6F6DD;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.popup2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F5E8F0;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popup2 input {
+    width: 300px; /* Puedes ajustar este valor según tus necesidades */
+    min-height: 100px; /* Ajusta este valor según cuánto espacio quieras para varias líneas de texto */
+    padding: 10px; /* Añade un poco de espacio interno para que se vea mejor */
+    border: 1px solid #ccc; /* Añade un borde para destacarlo */
+    border-radius: 5px; /* Añade esquinas redondeadas para un aspecto más suave */
+
+}
+
+.popup2 button {
+    padding: 8px 20px;
+    background-color: #D6F6DD;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup2 button:hover {
+    background-color: #9ed3aa;
+}

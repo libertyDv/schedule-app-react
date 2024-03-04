@@ -8,6 +8,34 @@ function Inicio() {
 
   const [popupOpen, setPopupOpen] = useState(false);
 
+  const [tasks, setTasks] = useState(["tarea1", "tarea2"])
+  const [newTasks, setNewTask] = useState("")
+
+  function handleInputChange(event) {
+    setNewTask(event.target.value)
+  }
+
+  function addTask() {
+    if (newTasks.trim() !== "") {
+      setTasks(prevTasks => [...prevTasks, newTasks])
+      setNewTask({
+        nombre: '',
+        subtarea: '',
+        fechaLimite: '',
+        categoria: ''
+      }) 
+      closePopup();
+    }
+  }
+
+
+  function deleteTask(index) {
+    const updatedTasks = tasks.filter((_, i) => i !== index)
+    setTasks(updatedTasks)
+  }
+
+
+
   const openPopup = () => {
     setPopupOpen(true);
   };
@@ -28,19 +56,25 @@ function Inicio() {
         <div className='divPersonal'>
           <h3>Personal</h3>
         </div>
+        <div className='divOtros'>
+          <h3>Otros</h3>
+        </div>
       </div>
 
       <div className='divTareas'>
-        <div className='contenedorTarea'>
-          <button className='botonDelete'>
-            <DeleteIcon />
-          </button>
-          <button className='botonDone'>
-            <CheckIcon />
-          </button>
-          <p>Nombre de la tarea</p>
-        </div>
+        {tasks.map((task, index) => (
+          <div className='contenedorTarea' key={index}>
+            <button className='botonDelete' onClick={() => deleteTask(index)}>
+              <DeleteIcon />
+            </button>
+            <button className='botonDone'>
+              <CheckIcon />
+            </button>
+            <p>{task}</p>
+          </div>
+        ))}
       </div>
+
 
       <button className='botonAdd' onClick={openPopup}>
         <AddIcon />
@@ -51,7 +85,11 @@ function Inicio() {
 
           <input
             type='text'
-            placeholder='Nombre de la tarea'></input>
+            placeholder='Nombre de la tarea'
+            value={newTasks}
+            onChange={handleInputChange}
+
+          ></input>
           <br></br>
 
           <input
@@ -71,7 +109,13 @@ function Inicio() {
             <option value="otra">Otra</option>
           </select>
 
-          <button onClick={closePopup}>Cerrar</button>
+          <button className="add-button"
+            onClick={addTask}>
+            Añadir
+          </button>
+          <br></br>
+          <br></br>
+          <button onClick={closePopup}>Cancelar</button>
         </div>
       )}
     </div>
